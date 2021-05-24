@@ -1,0 +1,533 @@
+.layout-builder {
+    position: fixed;
+    width: 300px;
+    background: white;
+    z-index: 1000;
+    right: -300px;
+    top: 0;
+    bottom: 0;
+    box-shadow: 8px 0 10px 3px rgba(0, 0, 0, 0.50);
+    overflow: auto;
+    transition: right .2s;
+}
+
+.layout-builder.show {
+    right: 0;
+}
+
+.layout-builder .layout-builder-toggle.shw i {
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.layout-builder .layout-builder-toggle.hdn {
+    display: none;
+}
+
+.layout-builder.show .layout-builder-toggle.hdn {
+    display: flex;
+}
+
+.layout-builder .layout-builder-toggle {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background: black;
+    position: fixed;
+    top: 50%;
+    margin-left: -50px;
+    display: flex;
+    font-size: 23px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -25px;
+}
+
+.layout-builder .layout-builder-body {
+    padding: 30px;
+}
+
+.layout-builder .layout-builder-body .custom-radio {
+    width: 46.6%;
+    float: left;
+    height: 50px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.layout-builder .layout-builder-body .custom-radio.active {
+    border: 3px solid white;
+    box-shadow: 0px 0px 0px 1px black;
+}
+
+.layout-builder .layout-builder-body .custom-radio:hover {
+    opacity: .9;
+}
+
+.layout-builder .layout-builder-body .custom-radio:nth-child(even) {
+    margin-right: 0;
+}
+
+.layout-builder .layout-builder-body .custom-radio:nth-child(1) {
+    background: #2e61bf; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2e61bf, #60c363); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2e61bf, #60c363);
+}
+
+.layout-builder .layout-builder-body .custom-radio:nth-child(2) {
+    background: #4568dc; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4568dc, #b06ab3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4568dc, #b06ab3);
+}
+
+.layout-builder .layout-builder-body .custom-radio:nth-child(3) {
+    background: #bf74b7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #bf74b7, #80b0d8); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #bf74b7, #80b0d8);
+}
+
+.layout-builder .layout-builder-body .custom-radio:nth-child(4) {
+    background: #5397ce; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5397ce, #dca937); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5397ce, #dca937);
+}
+
+.layout-builder .layout-builder-body .custom-radio label {
+    display: none;
+}
+
+.layout-builder .layout-builder-body .custom-control input[type="checkbox"]:checked + label {
+    color: black;
+}
+
+.layout-builder .layout-colors {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+}
+
+.layout-builder .layout-colors .layout-color-item {
+    width: 40px;
+    height: 40px;
+    background: red;
+    margin: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 5px solid transparent;
+    cursor: pointer;
+}
+
+.layout-builder .layout-colors .layout-color-item.active {
+    box-shadow: 0px 0px 0px 1px black
+}
+
+.layout-builder .layout-colors .layout-color-item span {
+    display: block;
+    height: 45%;
+}
+
+.layout-builder .layout-colors .layout-color-item span:first-child {
+    background: black;
+    transform: rotate(15deg);
+    width: 110%;
+    height: 70%;
+    margin-top: -5px;
+}
+
+.layout-alert {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* Social custom style */
+nav.navbar .header-body {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0;
+    -moz-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+
+nav.navbar .header-body form.search+ul.navbar-nav {
+    margin-left: auto !important;
+}
+
+nav.navbar .header-body ul.navbar-nav li.nav-item {
+    margin-left: auto !important;
+}
+
+
+/* logo width*/
+nav.navbar .header-logo a img {
+    width: 120px;
+    margin-right: 15px;
+}
+body nav.navbar {
+    background: #cc620d;
+    background: -webkit-linear-gradient(to right,#cc620d,#ffa649);
+    background: -webkit-gradient(linear,left top,right top,from(#cc620d),to(#ffa649));
+    background: -webkit-linear-gradient(left,#cc620d,#ffa649);
+    background: -moz- oldlinear-gradient(left,#cc620d,#ffa649);
+    background: -o-linear-gradient(left,#cc620d,#ffa649);
+    background: -webkit-gradient(linear,left top, right top,from(#cc620d),to(#ffa649));
+    background: linear-gradient(to right,#cc620d,#ffa649);
+}
+.btn.btn-info {
+    background: #ff790e;
+    border-color: #ff790e;
+    color: #fff;
+}
+
+
+.btn.btn-info:not(:disabled):not(.disabled):hover {
+    background: #f38832;
+    border-color: #f38832;
+}
+
+.btn.btn-info:not(:disabled):not(.disabled):visited {
+    background: #f19922 !important;
+    border-color: #f38832;
+}
+
+.btn.btn-info:not(:disabled):not(.disabled):active {
+    background: #f19922 !important;
+    border-color: #f38832;
+}
+
+body .page-header {
+    border-left-color: #f7ad6e!important;
+}
+
+body a:not(.btn) {
+    color: #f99641;
+}
+
+a.link-bold {
+    font-weight: 800;
+}
+body a:not(.btn):hover {
+    color: #e87818 !important;
+}
+
+/* change icon color to orange*/
+
+body .side-menu .side-menu-body a .icon {
+    background: -webkit-linear-gradient(#d06720,#efa346);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body a:not(.btn).delete-link {
+    color: red;
+}
+
+body a:not(.btn).twitter-username {
+    color: #646464;
+}
+
+body a:not(.btn).delete-link:hover {
+    color: blue !important;
+}
+
+p.text-timeline {
+    padding: 0;
+    margin: 0;
+}
+
+
+#upload-image, #upload-video, #upload-gif
+{
+    display: none;
+}
+
+#preview embed
+{
+    padding: 2px;
+
+}
+#preview embed:hover
+{
+    opacity: 0.5;
+    cursor: url('https://img.icons8.com/office/16/000000/delete-sign.png'), auto;
+
+}
+
+.images-inputs > input{
+    display: none;
+}
+
+#video-preview
+{
+    max-width: 200px;
+    max-height: 200px;
+    padding: 5px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#video-preview:hover{
+    opacity: 0.5;
+    cursor: url('https://img.icons8.com/office/16/000000/delete-sign.png'), auto;
+}
+
+.help-text
+{
+    margin-bottom: 2px;
+}
+
+.help-text > li
+{
+
+    line-height: 13px;
+}
+#tagcloud > a
+{
+    margin: 1px;
+    display: inline-block;
+    line-height: 35px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.text-muted
+{
+    display: block;
+}
+
+.text-muted > span
+{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2px;
+    margin: 3px 12px;
+}
+
+.text-muted > span >a > img:hover
+{
+    background-color: #e3e1e1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    transform: scale(1.1)
+
+}
+
+.text-muted > span > a > img {
+    max-width: 28px;
+    transition: transform .2s;
+}
+
+.media-twitter
+{
+    display:block;
+    max-width: 400px;
+
+}
+
+.images{
+    max-width: 100%;
+}
+
+.media-twitter img{
+    width: 100%;
+}
+
+.media-twitter video{
+    max-width: 100%;
+}
+
+.timeline .timeline-item {
+    word-break: break-word !important;
+}
+
+.slider-custom
+{
+}
+
+.btn-follow
+{
+    margin:4px 2px;
+}
+
+.fail-bg{
+    color: #721c24;
+}
+
+.success-bg{
+    color: #155724;
+
+}
+
+.avatar-form-user
+{
+    margin-bottom: 20px !important;
+}
+
+#date-recent-search {
+    display: block;
+    margin: -10px 0 0 15px;
+}
+
+.img-campaign
+{
+    max-width: 300px;
+}
+.img-campaign > a > img
+{
+    max-width: 100%;
+}
+
+.account-opt-buttons
+{
+    float:right;
+    font-size:12px;
+    font-weight: 400;
+    margin-right: 2px;
+    padding: 5px 7px;
+}
+.account-opt-buttons > i
+{
+    margin-left:2px;
+}
+
+.custom-pagination > li
+{
+    margin: 0 5px;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media (min-width: 380px) {
+    .media-twitter
+    {
+        display:block;
+        max-width: 280px;
+
+    }
+
+     }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+.media-twitter
+{
+    display:block;
+    max-width: 300px;
+
+}
+
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .media-twitter
+{
+    display:block;
+    max-width: 250px;
+
+}
+ }
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .media-twitter
+{
+    display:block;
+    max-width: 450px;
+
+}
+}
+
+.active-color
+{
+    color:#0acf97;
+    font-size: 15px;
+}
+
+.inactive-color
+{
+    color: #d00d1f;
+    font-size: 15px;
+}
+.card-header-subtitle-custom
+{
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 100;
+}
+.spin_hashtags
+{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.files-options {
+    display: inline-block;
+}
+.files-options > a
+{
+    margin: 0 10px !important;
+}
+
+.delete-file-option
+{
+    color: rgb(238, 40, 26) !important;
+}
+
+.download-file-option
+{
+    color: rgb(35, 69, 219) !important;
+}
+
+.open-file-option
+{
+    color:#2ebf91 !important;
+}
+
+
