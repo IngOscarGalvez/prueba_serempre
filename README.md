@@ -87,3 +87,10 @@ Run the laravel development server
 The api can now be accessed at
 
     http://localhost:8000
+
+The accessed at Administrator
+
+    User : admin@admin.com
+    Pass : 123456aD
+    
+    
